@@ -13,5 +13,6 @@ class EmailParser
   
   def p_parse(str)
     @parse = str.split(/[[([\s]|[,][\s])]]/)
+    @parse = @parse.select{|e| e.length > 0}
   end
 end
