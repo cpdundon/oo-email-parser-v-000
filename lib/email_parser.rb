@@ -9,6 +9,7 @@ class EmailParser
       @parse = i_parse(email_info)
   end
   
+  
   def i_parse(str)
     @parse = str.scan(/[^[([\s]|[,][\s])]]/)
   end
