@@ -12,6 +12,6 @@ class EmailParser
   private
   
   def p_parse(str)
-    @parse = str.scan(/[^[([\s]|[,][\s])]]/)
+    @parse = str.split(/[[([\s]|[,][\s])]]/)
   end
 end
