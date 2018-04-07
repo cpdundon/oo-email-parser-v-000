@@ -6,11 +6,12 @@ class EmailParser
   attr_reader :parse
   
   def initialize(email_info)
-      @parse = i_parse(email_info)
+      @parse = p_parse(email_info)
   end
   
+  private
   
-  def i_parse(str)
+  def p_parse(str)
     @parse = str.scan(/[^[([\s]|[,][\s])]]/)
   end
 end
